@@ -4,6 +4,7 @@ on:
     push:
         branches: [master]
 
+# Activity type events example below (pull_request)
 # name: Events Demo 1
 
 # on:
