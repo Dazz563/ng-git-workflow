@@ -1,0 +1,45 @@
+.container {
+	height: 100vh;
+	padding: 3rem;
+	.img-container {
+		width: 7rem;
+		height: 7rem;
+		background-color: #3f3828;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		border: 4px solid #292d2d;
+		img {
+			width: 4rem;
+			height: 4rem;
+			object-fit: contain;
+		}
+	}
+	.main-title {
+		text-align: center;
+		margin: 1rem 0;
+	}
+	.card {
+		width: 70%;
+		margin: auto;
+		min-height: 100px;
+		background-color: #3f3828;
+		border-radius: 1rem;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.btn {
+			width: 100px;
+			height: 30px;
+			background: #f8bd47;
+			font-family: inherit;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
