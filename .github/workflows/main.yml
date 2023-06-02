@@ -1,8 +1,16 @@
-name: Frontend build
+# name: Frontend build
+
+# on:
+#     push:
+#         branches: [master]
+
+name: Events Demo 1
 
 on:
-    push:
-        branches: [master]
+    pull_request:
+        types:
+            - opened
+    workflow_dispatch:
 
 jobs:
     deploy:
