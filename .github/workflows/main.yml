@@ -22,13 +22,15 @@ jobs:
                   # The `node-version` variable specifies that any minor or patch version of Node.js is acceptable.
                   node-version: 18.x
             # Caches the node modules (this is an example of caching, would be more applicable if say we were installing them in a previous job for testing)
-            - name: Cache node modules
+            - name: Cache dependencies
+              id: cache
               uses: actions/cache@v3
               with:
-                  path: ~/.npm
+                  path: node_modules
                   key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
-            # Installs the dependencies ci(locked dep.)
+            # Installs the dependencies ci(locked dep.) if the cache was not hit, otherwise it will use the cached node_modules
             - name: Install dependencies
+              if: steps.cache.outputs.cache-hit != 'true'
               run: npm ci
             # Builds the app
             - name: Build
