@@ -54,4 +54,4 @@ jobs:
                   cd ng-git-workflow
                   ls
             - name: Deploy
-              run: echo "Deploying...!"
+              run: echo "Deploying..!"
