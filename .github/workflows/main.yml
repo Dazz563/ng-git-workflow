@@ -43,7 +43,7 @@ jobs:
                   name: ng-git-workflow-dist-files
             - name: Output contents of artifact
               run: |
-                  cd ng-git-workflow-dist-files/dist
+                  cd ng-git-workflow-dist-files
                   ls
             - name: Deploy
               run: echo "Deploying...!"
